@@ -1,0 +1,5 @@
+Contact: mailto:REPLACE-WITH-SECURITY-CONTACT@example.invalid
+Expires: 2027-08-14T00:00:00.000Z
+Policy: https://REPLACE_WITH_YOUR_DOMAIN.example/security/
+Preferred-Languages: en
+Canonical: https://REPLACE_WITH_YOUR_DOMAIN.example/.well-known/security.txt

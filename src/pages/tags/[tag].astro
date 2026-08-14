@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PostCard from '../../components/PostCard.astro'; import { isProductionPost, slugify } from '../../lib/site';
+export async function getStaticPaths() { const posts = await getCollection('blog', isProductionPost); const tags = [...new Set(posts.flatMap(p => p.data.tags))]; return tags.map(tag => ({ params: { tag: slugify(tag) }, props: { tag, posts: posts.filter(p => p.data.tags.some(t => slugify(t) === slugify(tag))) } })); }
+const { tag, posts } = Astro.props;
+---
+<BaseLayout title={`Topic: ${tag}`}><section class="mx-auto max-w-6xl px-5 py-16"><a class="font-mono text-xs uppercase tracking-wider text-signal" href="/blog/">← Research</a><h1 class="mt-4 text-4xl font-semibold text-ink">#{tag}</h1><div class="mt-10 grid gap-5 md:grid-cols-2">{posts.map((post) => <PostCard post={post} />)}</div></section></BaseLayout>

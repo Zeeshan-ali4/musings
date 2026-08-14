@@ -1,0 +1,5 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro'; import PostCard from '../../components/PostCard.astro'; import { isProductionPost } from '../../lib/site';
+const posts = (await getCollection('blog', isProductionPost)).sort((a,b) => b.data.published.valueOf() - a.data.published.valueOf());
+---
+<BaseLayout title="Research"><section class="mx-auto max-w-6xl px-5 py-16"><p class="font-mono text-xs uppercase tracking-wider text-signal">Archive</p><h1 class="mt-3 text-4xl font-semibold text-ink">Research notes</h1><p class="mt-4 max-w-2xl leading-7 text-slate">Practical notes on enterprise security, detection engineering, and understanding how systems fail.</p><div class="mt-10 grid gap-5 md:grid-cols-2">{posts.map((post) => <PostCard post={post} />)}</div></section></BaseLayout>

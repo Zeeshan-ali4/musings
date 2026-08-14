@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { background: #0a1017; scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #0a1017; color: #e6edf3; font-family: ui-sans-serif, system-ui, sans-serif; }
+* { box-sizing: border-box; }
+a { color: inherit; text-decoration-color: #5eead4; text-underline-offset: 3px; }
+a:hover { color: #5eead4; }
+a:focus-visible { outline: 3px solid #5eead4; outline-offset: 4px; border-radius: 2px; }
+.skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 50; background: #5eead4; color: #071019; padding: .7rem 1rem; font-weight: 700; }
+.skip-link:focus { top: 1rem; }
+.prose { color: #c6d1db; font-size: 1.05rem; line-height: 1.8; }
+.prose h2,.prose h3 { color: #f4f8fb; line-height: 1.2; scroll-margin-top: 6rem; }
+.prose h2 { margin-top: 3.5rem; font-size: 1.7rem; }.prose h3 { margin-top: 2.25rem; font-size: 1.3rem; }
+.prose p,.prose ul,.prose ol,.prose blockquote,.prose table { margin: 1.25rem 0; }
+.prose ul,.prose ol { padding-left: 1.5rem; }.prose li+li { margin-top: .4rem; }
+.prose code { color: #a7f3d0; background: #17222d; padding: .12rem .35rem; border-radius: .25rem; font-family: ui-monospace, monospace; font-size: .9em; }
+.prose pre { overflow-x: auto; border: 1px solid #2b3a49; border-radius: .65rem; padding: 1rem; background: #0d141c; }.prose pre code { background: transparent; padding: 0; }
+.prose blockquote { border-left: 3px solid #5eead4; padding: .6rem 1rem; color: #dbe7ef; background: #101a23; }
+.prose table { width: 100%; border-collapse: collapse; font-size: .92rem; }.prose th,.prose td { text-align: left; padding: .65rem; border: 1px solid #2b3a49; }.prose th { color: #f4f8fb; background: #17222d; }
+.prose img { max-width: 100%; height: auto; border-radius: .5rem; }.prose :not(pre)>code { word-break: break-word; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
