@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: dark; }
+:root {
+  color-scheme: dark;
+  --header-h: 64px;
+  --node-identity: #5b8cff; --node-network: #4ee08a; --node-cloud: #b98bff;
+  --node-web: #38d9e8; --node-malware: #ff6b7a; --node-detection: #ffc94d;
+}
 html { background: #0a1017; scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: #0a1017; color: #e6edf3; font-family: ui-sans-serif, system-ui, sans-serif; }
 * { box-sizing: border-box; }

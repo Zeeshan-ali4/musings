@@ -11,3 +11,11 @@ const nav = [['/blog', 'Research'], ['/about', 'About'], ['/security', 'Security
     </nav>
   </div>
 </header>
+<script is:inline>
+  (function () {
+    var header = document.querySelector('header');
+    var setH = function () { document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px'); };
+    setH();
+    window.addEventListener('resize', setH);
+  })();
+</script>
