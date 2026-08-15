@@ -1,5 +1,5 @@
 export const SITE = {
-  name: 'Signal Surface',
+  name: 'Musings',
   description: 'Notes on detection engineering, defensive architecture, and practical security research.',
   url: 'https://REPLACE_WITH_YOUR_DOMAIN.example',
   securityContact: 'REPLACE-WITH-SECURITY-CONTACT@example.invalid',

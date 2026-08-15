@@ -1,4 +1,4 @@
-# Signal Surface
+# Musings
 
 A security-first personal cybersecurity research blog built with Astro, TypeScript, Tailwind CSS, Markdown content collections, and static Vercel deployment.
 
